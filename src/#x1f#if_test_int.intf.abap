@@ -22,7 +22,9 @@ INTERFACE /x1f/if_test_int
     IMPORTING
       iv_description TYPE /x1f/test_desc
     RETURNING
-      VALUE(rs_data) TYPE ty_test_int.
+      VALUE(rs_data) TYPE ty_test_int
+    RAISING
+      cx_uuid_error.
 
   METHODS update
     IMPORTING
