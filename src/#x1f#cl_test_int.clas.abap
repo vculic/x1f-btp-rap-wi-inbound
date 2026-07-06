@@ -78,7 +78,9 @@ CLASS /X1F/CL_TEST_INT IMPLEMENTATION.
     rs_data-changed_by  = rs_data-created_by.
     rs_data-changed_at  = lv_now.
 
-    INSERT /x1f/test_int FROM @rs_data.
+    " rs_data (ty_test_int) has no MANDT field, so it is not unicode convertible to the
+    " DB row - CORRESPONDING builds a proper /x1f/test_int row (client is filled implicitly)
+    INSERT /x1f/test_int FROM @( CORRESPONDING /x1f/test_int( rs_data ) ).
   ENDMETHOD.
 
   METHOD /x1f/if_test_int~update.
