@@ -30,6 +30,7 @@ Namespace: `/X1F/`
 | `CALL FUNCTION 'GUID_CREATE'` | `cl_system_uuid=>create_uuid_x16_static( )` (ili `create_uuid_c32_static( )`) |
 | `GET TIME STAMP FIELD` (ostaje) | Dozvoljeno u cloud-u, koristi `TIMESTAMPL` tip |
 | Klasična autorizacija (`AUTHORITY-CHECK`) | Označi komentarom, ne prevodi automatski |
+| Gde kod je zgodno i još ako daje bolje rezultate koristi FIELD SYMBOL umesto struktura |
 
 Ovu tabelu dopunjavaj kako se pojavljuju novi slučajevi tokom migracije.
 
